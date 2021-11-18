@@ -81,10 +81,43 @@ input[type="submit"]{
   width: 50%;
 }
 
-
 .img-aside{
   width: 100%;
   height: 100vh;
   object-fit: cover;
   object-position: center center;
 }
+
+.container-menu{
+  margin-top: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.opciones-menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+button {
+  background-color: greenyellow;
+  border-radius: 15px;
+  width: 100px;
+  height: 25px;
+}
+
+button:hover {
+  background-color: rgb(236, 240, 17);
+}
+
+.comanda {
+  background-color: gray;
+  border-radius: 15px;
+  height: 300px;
+  width: 212px;
+  display: flex;
+  justify-content: center;
+}
+

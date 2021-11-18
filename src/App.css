@@ -1,38 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fira+Sans:wght@500&family=M+PLUS+2:wght@500;600;700&family=Montserrat:ital,wght@1,100&family=Shippori+Antique+B1&display=swap');
+
 .App {
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+	text-decoration: none;
+	margin: 0px;
+	padding: 0px;
+	font-family: 'Fira Sans', sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+  background-color: black;
+  color:aliceblue;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+h1{
+font-size: 3rem;
+font-family: Bebas Neue;
+}
+
+input[type="email"],
+input[type="password"] {
+  font-size: 1em;
+    height: 33px;
+  background: white;
+  padding: 0px 15px;
+  font-weight: bold;
+  width: 70%;
+  border-radius: 15px;
+  margin-top: 26px;
+  color: black;
+}
+
+input[type="submit"]{
+  width: 80%;
+    color: white;
+    background: yelo;
+    background-color: black;
+    border-radius: 3px solid #FFD200;
+    border: 3px solid #FFD200;
+    border-radius: 15px;
+    height: 36px;
+    font-size: 1rem;
+    margin-top: 30px;
+}
+
+.container{
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+}
+
+.div-form {
+  width: 50%;
+  height: 100vh;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  display: flex;
+  flex-direction: column;
 }
 
-.App-link {
-  color: #61dafb;
+.div-form form {
+  border: 3px solid #FFD200;
+  border-radius: 15px;
+  height: 40%;
+  width: 65%;
+  margin-bottom: 50px;
+  padding: 20px;
+  text-align: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.div-hamburger {
+  width: 50%;
+  height: 100vh;
+  background-color: white;
+}
+
+
+.logo {
+  width: 50%;
+}
+
+
+.img-aside{
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  object-position: center center;
 }

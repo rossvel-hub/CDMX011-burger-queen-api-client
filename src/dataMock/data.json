@@ -1,51 +1,58 @@
 {
-    "Desayuno": [
+    "Products": [
       {
-        "id": "01",
+        "id": "1",
         "name": "Café americano",
-        "price": 5
+        "price": 5,
+        "type": "desayuno"
       },
       {
-        "id": "02",
+        "id": "2",
         "name": "Café americano",
-        "price": 7
+        "price": 7,
+        "type": "desayuno"
       },
       {
-        "id": "03",
+        "id": "3",
         "name": "Café con leche",
-        "price": 10
+        "price": 10,
+        "type": "desayuno"
       },
       {
-        "id": "04",
+        "id": "4",
         "name": "Sandwich de jamón y queso",
-        "price": 7
-      }
-    ],
-    "Almuerzo": [
+        "price": 7,
+        "type": "desayuno"
+      },
       {
-        "id": "05",
+        "id": "5",
         "name": "Hamburguesa simple",
-        "price": 10
+        "price": 10,
+        "type": "almuerzo"
       },
       {
-        "id": "06",
+        "id": "6",
         "name": "Hamburguesa doble",
-        "price": 15
+        "price": 15,
+        "type": "almuerzo"
       },
       {
-        "id": "07",
+        "id": "7",
         "name": "Papas fritas",
-        "price": 5
+        "price": 5,
+        "type": "almuerzo"
       },
       {
-        "id": "08",
+        "id": "8",
         "name": "Aros de cebolla",
-        "price": 5
+        "price": 5,
+        "type": "almuerzo"
       },
       {
-        "id": "09",
+        "id": "9",
         "name": "Agua 500ml",
-        "price": 5
+        "price": 5,
+        "type": "almuerzo"
       },
       {
         "id": "10",
@@ -55,12 +62,14 @@
       {
         "id": "11",
         "name": "Bebida/gaseosa 500ml",
-        "price": 7
+        "price": 7,
+        "type": "almuerzo"
       },
       {
         "id": "12",
         "name": "Bebida/gaseosa 750ml",
-        "price": 10
+        "price": 10,
+        "type": "almuerzo"
       }
     ]
   }

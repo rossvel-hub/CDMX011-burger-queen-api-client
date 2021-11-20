@@ -36,7 +36,7 @@ input[type="password"] {
 input[type="submit"]{
   width: 80%;
     color: white;
-    background: yelo;
+    background: #FFD200;
     background-color: black;
     border-radius: 3px solid #FFD200;
     border: 3px solid #FFD200;
@@ -44,11 +44,16 @@ input[type="submit"]{
     height: 36px;
     font-size: 1rem;
     margin-top: 30px;
+    cursor: pointer;
 }
 
 .container{
   display: flex;
   flex-direction: row;
+}
+
+.error {
+  cursor: pointer;
 }
 
 .div-form {
@@ -87,12 +92,21 @@ input[type="submit"]{
   object-fit: cover;
   object-position: center center;
 }
+/*------CSS CONTAINER------*/
 
 .container-menu{
   margin-top: 100px;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
+}
+.logo-container {
+  width: 10%;
+}
+.input-name-cliente{
+  width: 180px;
+  height: 25px;
+  border-radius: 12px;
 }
 
 .opciones-menu {
@@ -114,10 +128,24 @@ button:hover {
 
 .comanda {
   background-color: gray;
-  border-radius: 15px;
-  height: 300px;
-  width: 212px;
-  display: flex;
-  justify-content: center;
+    border-radius: 15px;
+    height: 300px;
+    width: 212px;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: space-around;
 }
 
+.btn-enviar-cocina{
+width: 150px;
+height: 25px;
+margin-top:auto;
+border-radius: 10px;
+}
+
+.footer-table {
+ width: 100%;
+ margin-top:auto;
+}

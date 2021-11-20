@@ -15,7 +15,6 @@ export const AuthProvider = (props) => {
     })
   }, [])
 
-	
   const login = (email, password) => {
     return auth.signInWithEmailAndPassword(email, password);
   }

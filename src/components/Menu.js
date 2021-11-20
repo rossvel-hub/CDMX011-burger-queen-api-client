@@ -1,18 +1,18 @@
-import React from 'react'
-import { Producto } from './Producto';
+import React, { Fragment } from 'react'
+// import { Producto } from './Producto';
 
-export const Menu = (props) => {
-    let {
-        products
-      } = props;
-
-    
+export const Menu = (product) => {
+    // let {
+    //     products
+    //   } = props;
     return (
         <div>
-            <h1>Todos los Productos</h1>
-            <section>
-            {products.map(product => <Producto product={product} key={product.id}></Producto>)}
-            </section>
+            {product&&
+            <Fragment>
+        <h2>{product.nameProduct}</h2>
+        <strong>{product.price}</strong>
+        </Fragment>
+            }
         </div>
     );
 }

@@ -1,14 +1,15 @@
-import React, { useState, Fragment } from 'react';
+import React, { useState, Fragment, useEffect } from 'react';
 import { useAuth } from '../context/AuthContext';
 import { useHistory } from 'react-router-dom';
 import logo from '../assets/logo.png';
 import table from '../assets/table.png';
 // import { data } from '../dataMock/data.json';
+import { Menu } from '../components/Menu';
 
 export const Container = function () {
 	const [error, setError] = useState('');
 	const { logout } = useAuth();
-	const [desayuno, setDesayuno] = useState(true)
+	// const [desayuno, setDesayuno] = useState(true)
 	const history = useHistory();
 
 	// const [data, setData] = useState([]);
@@ -26,7 +27,17 @@ export const Container = function () {
 	//       }
 	//     });
 	//   }, [])
+	let [products, setProducts] = useState();
 
+	let getData = async () => {
+		let url = 'http://localhost:5000/Products';
+		let getFetchData = await fetch(url).then(result => result.json())
+		setProducts(getFetchData);
+	}
+
+	useEffect(() => {
+		getData()
+	}, [])
 
 	const handleLogout = async () => {
 		try {
@@ -57,11 +68,15 @@ export const Container = function () {
 
 			<div className="container-menu">
 				<div className="opciones-menu">
-					<button onClick={() => { setDesayuno(true) }}>Desayuno</button>
+					<h1>Burguer Queen Menu</h1>
+					{products && products.data.map(product =>
+						<Menu product={product} key={product.id} />
+					)}
+					{/* <button onClick={() => { setDesayuno(true) }}>Desayuno</button>
 					<button onClick={() => { setDesayuno(false) }}>Almuerzo</button>
 					{desayuno ? <ul><li>Cafe Americano</li><li>Cafe con leche</li><li>Jugo de frutas</li><li>Sandwich de jamon y queso</li></ul> :
 						<ul><li>Hamburguesa sencilla</li><li>Hamburguesa doble</li><li>Papas fritas</li><li>Aros de cebolla</li><li>Agua 500 mil</li><li>Agua 750ml</li><li>Gaseosa 500ml</li><li>Gaseosa 750ml</li></ul>
-					}
+					} */}
 				</div>
 				<div className="comanda">
 					<h2>Comanda</h2>
@@ -69,7 +84,7 @@ export const Container = function () {
 				</div>
 			</div>
 			<footer>
-			<img src={table} alt='table' className="footer-table" />
+				<img src={table} alt='table' className="footer-table" />
 			</footer>
 		</Fragment>
 	);

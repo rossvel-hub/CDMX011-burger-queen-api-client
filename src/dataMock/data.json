@@ -57,7 +57,8 @@
       {
         "id": "10",
         "name": "Agua 750ml",
-        "price": 7
+        "price": 7,
+        "type": "almuerzo"
       },
       {
         "id": "11",

@@ -1,4 +1,4 @@
-export const helpHttp = () => {
+ const helpHttp = () => {
     const customFetch = (endpoint, options) => {
         const defaultHeader = {
             accept: "application/json",
@@ -40,6 +40,7 @@ export const helpHttp = () => {
     };
 };
 
+export default helpHttp;
 
 
 

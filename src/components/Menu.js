@@ -1,17 +1,23 @@
-import React, { Fragment } from 'react'
+import React from 'react';
+import { Items } from "./Items";
 /* eslint-disable react/prop-types */
-function Menu({product}) {
-    
-    console.log(product);
+function Menu( props ) {
+
+    let { products } = props;
+
     return (
-        <div>
-            {product&&
-            <Fragment>
-        <h2>{product.name}</h2>
-        <strong>{product.price}</strong>
-        </Fragment>
-            }
-        </div>
+      
+            <div>
+                <h3>Lista de productos con precio </h3>
+                <section>
+          {products.map((product) => (
+            <Items
+              product={product}
+              key={product.id}
+            ></Items>
+          ))}
+        </section>
+            </div>
     );
 }
 export default Menu;

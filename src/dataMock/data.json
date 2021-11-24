@@ -20,19 +20,19 @@
       },
       {
         "id": "4",
-        "name": "Sandwich de jamón y queso",
+        "name": "Sandwich de J/Q",
         "price": 7,
         "type": "desayuno"
       },
       {
         "id": "5",
-        "name": "Hamburguesa simple",
+        "name": "Hamburguesa S",
         "price": 10,
         "type": "almuerzo"
       },
       {
         "id": "6",
-        "name": "Hamburguesa doble",
+        "name": "Hamburguesa D",
         "price": 15,
         "type": "almuerzo"
       },
@@ -62,13 +62,13 @@
       },
       {
         "id": "11",
-        "name": "Bebida/gaseosa 500ml",
+        "name": "Soda 500ml",
         "price": 7,
         "type": "almuerzo"
       },
       {
         "id": "12",
-        "name": "Bebida/gaseosa 750ml",
+        "name": "Soda 750ml",
         "price": 10,
         "type": "almuerzo"
       }

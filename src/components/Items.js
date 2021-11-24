@@ -3,15 +3,19 @@ import React from 'react'
 
 export const Items = (props) => {
     let {
-        product
+        product,
+        onAdd
     } = props;
 
     return (
-        <div className="card">
-            <p>{product.name}</p>
-            <p className="price">${product.price}</p>
-            <p><button >Agregar</button></p>
-            <p><button >Eliminar</button></p>
+        <div className="table-items">
+            <p className="name-products">{product.name}</p>
+            <p className="price">$ {product.price}</p>
+
+            <div>
+        <button onClick={() => onAdd(product)} className="btn-añadir-comanda">Añadir a comanda</button>
+      </div>
+
         </div>
     )
 }

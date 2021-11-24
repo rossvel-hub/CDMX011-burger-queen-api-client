@@ -8,7 +8,6 @@ function Menu( props ) {
     return (
       
             <div>
-                <h3>Lista de productos con precio </h3>
                 <section>
           {products.map((product) => (
             <Items

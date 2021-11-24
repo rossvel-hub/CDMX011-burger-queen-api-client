@@ -108,10 +108,10 @@ input[type="submit"]{
 }
 
 .container-menu{
-  margin-top: 100px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: auto;
 }
 .logo-container {
   width: 38%;
@@ -133,6 +133,7 @@ input[type="submit"]{
 .material-icons {
 width: 7%;
 height: 30%;
+cursor: pointer;
 }
 
 .btn-nombre {
@@ -140,22 +141,85 @@ height: 30%;
   height: 25%;
 }
 
-.opciones-menu {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
+.btn-nom-cliente {
+  width: 81%;
+  border-radius: 15px;
+  height: 36px;
+  background-color: #FFD200;
+  cursor: pointer;
 }
 
+.btn-nom-cliente:hover{
+  background-color: rgb(240, 151, 17);
+}
+
+.table-items {
+  display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-content: space-between;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+
+.name-products {
+margin: 10px;
+}
+
+.price {
+  margin: 10px;
+}
 .btns-menu {
-  display: flex;
-  flex-direction: row;
-  margin: 20px;
+    display: flex;
+    flex-direction: row;
+    margin: 20px;
+    justify-content: space-around;
 }
 
-button {
-  background-color: greenyellow;
+.btn-desayuno {
+  background-color: rgb(101, 160, 13);
   border-radius: 15px;
   width: 100px;
+  height: 25px;
+  margin: 10px;
+}
+
+.btn-almuerzo {
+  background-color: rgb(101, 160, 13);
+  border-radius: 15px;
+  width: 100px;
+  height: 25px;
+  margin: 10px;
+}
+
+.btn-añadir-comanda{
+  background-color: rgb(101, 160, 13);
+  border-radius: 15px;
+  width: 100px;
+  height: 25px;
+  margin: 10px;
+}
+.btn-añadir-comanda:hover {
+  background-color: rgb(236, 240, 17);
+}
+
+.btn-eliminar {
+  background-color: rgb(101, 160, 13);
+  border-radius: 15px;
+  width: 100px;
+  height: 25px;
+  margin: 10px;
+}
+.btn-eliminar:hover {
+  background-color: rgb(240, 151, 17);
+}
+
+
+.btn-añadir-comanda {
+  background-color: greenyellow;
+  border-radius: 15px;
+  width: 144px;
   height: 25px;
 }
 
@@ -175,6 +239,15 @@ button:hover {
     align-content: space-around;
 }
 
+.btn-remove{
+align-items: center;
+font-size: 2rem;
+}
+
+.btn-add{
+  font-size: 2rem;
+}
+
 .btn-enviar-cocina{
 width: 150px;
 height: 25px;
@@ -189,4 +262,11 @@ border-radius: 10px;
 
 .footer h4 {
   color: yellow;
+}
+
+/*--------------  Cocina -----------*/
+
+.cocina {
+  display: flex;
+  flex-direction: column;
 }

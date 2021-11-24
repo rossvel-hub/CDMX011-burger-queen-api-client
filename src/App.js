@@ -2,6 +2,7 @@ import React, { Fragment } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { Login } from './components/Login';
 import { Container } from './components/Container';
+import { Cocina } from './components/Cocina';
 import { AuthProvider } from './context/AuthContext';
 
 import './App.css';
@@ -17,6 +18,9 @@ function App() {
             </Route>
             <Route path="/login">
               <Login />
+            </Route>
+            <Route path="/Cocina">
+              <Cocina />
             </Route>
           </Switch>
         </Router>

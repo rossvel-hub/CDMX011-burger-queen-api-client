@@ -6,7 +6,8 @@ const Comanda = (props) => {
     let {
         productsToOrder,
         increaseProductQuantity,
-        decreaseProductQuantity
+        decreaseProductQuantity,
+        clientName
     } = props;
 
 
@@ -41,7 +42,7 @@ const Comanda = (props) => {
 
 
             <button className="btn-enviar-cocina">ENVIAR A COCINA</button>
-            <p>Cliente estrella :</p>
+            <p>Cliente estrella : {clientName}</p>
 
         </div>
 

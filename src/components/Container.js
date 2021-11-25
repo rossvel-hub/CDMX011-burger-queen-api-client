@@ -12,6 +12,7 @@ export const Container = function () {
 	const { logout } = useAuth();
 	const [menu, setMenu] = useState('desayuno');
 	const [productsToOrder, setProductsToOrder] = useState([]);
+	const [clientName, setClientName] = useState('');
 	const history = useHistory();
 
 	const [data, setData] = useState([]);
@@ -37,10 +38,16 @@ export const Container = function () {
 		}
 	}
 
+	// Funcion NombreCliente
+	const nombreCliente = (e) => {
+		setClientName(e.target.value);
+	}
+
 	const filterProductos = () => {
 		return data.filter((p) => p.type == menu);
 	};
 
+	// Inicio de funciones para la comanda
 	const addProductToCommand = (product) => {
 		const exist = productsToOrder.find((x) => x.id === product.id);
 		if (exist) {
@@ -81,6 +88,8 @@ export const Container = function () {
 			);
 		}
 	};
+	// Fin de funciones para la comanda
+
 
 	return (
 		<Fragment>
@@ -96,7 +105,7 @@ export const Container = function () {
 
 						<label>
 							Nombre del cliente  :
-							<input type="nombre" className="input-name-cliente" placeholder='' required />
+							<input type="nombre" className="input-name-cliente" placeholder='' onChange={nombreCliente} value={clientName.value} required />
 						</label>
 						<button className="btn-nom-cliente"> Ingresa Nombre de Cliente a Comanda</button>
 					</div>
@@ -121,7 +130,7 @@ export const Container = function () {
 						{data && <Menu products={filterProductos()} addProductToCommand={addProductToCommand} />}
 					</div>
 				</div>
-				<Comanda productsToOrder={productsToOrder} increaseProductQuantity={increaseProductQuantity} decreaseProductQuantity={decreaseProductQuantity} />
+				<Comanda productsToOrder={productsToOrder} increaseProductQuantity={increaseProductQuantity} decreaseProductQuantity={decreaseProductQuantity} clientName={clientName} />
 			</div>
 
 			<footer>

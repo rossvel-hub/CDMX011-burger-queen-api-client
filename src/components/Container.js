@@ -5,13 +5,13 @@ import logo from '../assets/logo.png';
 import table from '../assets/table.png';
 import Menu from '../components/Menu';
 import helpHttp from '../helpers/Helpers';
-
-
+import Comanda from '../components/Comanda';
 
 export const Container = function () {
 	const [error, setError] = useState('');
 	const { logout } = useAuth();
 	const [menu, setMenu] = useState('desayuno');
+	const [productsToOrder, setProductsToOrder] = useState([]);
 	const history = useHistory();
 
 	const [data, setData] = useState([]);
@@ -37,13 +37,51 @@ export const Container = function () {
 		}
 	}
 
-	// const handleName = e => setNombre(e.target.value);
-
 	const filterProductos = () => {
 		return data.filter((p) => p.type == menu);
 	};
 
-	
+	const addProductToCommand = (product) => {
+		const exist = productsToOrder.find((x) => x.id === product.id);
+		if (exist) {
+			setProductsToOrder(
+				productsToOrder.map((x) =>
+					x.id === product.id ? { ...exist, qty: exist.qty } : x
+				)
+			);
+		} else {
+			setProductsToOrder([...productsToOrder, { ...product, qty: 1 }])
+		}
+		console.log("funcion", productsToOrder);
+	}
+
+
+	const increaseProductQuantity = (product) => {
+		const exist = productsToOrder.find((x) => x.id === product.id);
+		if (exist) {
+			setProductsToOrder(
+				productsToOrder.map((x) =>
+					x.id === product.id ? { ...exist, qty: exist.qty + 1 } : x
+				)
+			);
+		} else {
+			setProductsToOrder([...productsToOrder, { ...product, qty: 1 }])
+		}
+	}
+
+	const decreaseProductQuantity = (product) => {
+		const exist = productsToOrder.find((x) => x.id === product.id);
+		if (exist.qty === 1) {
+			setProductsToOrder(productsToOrder.filter((x) => x.id !== product.id));
+		} else {
+			setProductsToOrder(
+				productsToOrder.map((x) =>
+					x.id === product.id ? { ...exist, qty: exist.qty - 1 } : x
+				)
+			);
+		}
+	};
+
 	return (
 		<Fragment>
 			<header >
@@ -55,7 +93,7 @@ export const Container = function () {
 						<span className="material-icons">
 							face
 						</span>
-						
+
 						<label>
 							Nombre del cliente  :
 							<input type="nombre" className="input-name-cliente" placeholder='' required />
@@ -74,17 +112,17 @@ export const Container = function () {
 
 			<div className="container-menu">
 				<div className="opciones-menu">
-					<h2>Burguer Queen Menu</h2>
+					<h2>Burger Queen Menu</h2>
 					<div className="btns-menu">
 						<button onClick={() => { setMenu("desayuno") }} className="btn-desayuno">DESAYUNO</button>
 						<button onClick={() => { setMenu("almuerzo") }} className="btn-almuerzo">ALMUERZO</button>
 					</div>
 					<div className="table-products">
-							{data && <Menu products={filterProductos()} />}
+						{data && <Menu products={filterProductos()} addProductToCommand={addProductToCommand} />}
 					</div>
 				</div>
-
-			</div> 
+				<Comanda productsToOrder={productsToOrder} increaseProductQuantity={increaseProductQuantity} decreaseProductQuantity={decreaseProductQuantity} />
+			</div>
 
 			<footer>
 				<br />

@@ -5,7 +5,6 @@ import logo from '../assets/logo.png';
 import table from '../assets/table.png';
 import Menu from '../components/Menu';
 import helpHttp from '../helpers/Helpers';
-import Comanda from '../components/Comanda';
 
 
 
@@ -14,7 +13,7 @@ export const Container = function () {
 	const { logout } = useAuth();
 	const [menu, setMenu] = useState('desayuno');
 	const history = useHistory();
-	
+
 	const [data, setData] = useState([]);
 	let api = helpHttp();
 	let url = ' http://localhost:5000/Products';
@@ -84,9 +83,6 @@ export const Container = function () {
 							{data && <Menu products={filterProductos()} />}
 					</div>
 				</div>
-
-				{/* COMPONENTE COMANDA */}
-				<Comanda/>
 
 			</div> 
 

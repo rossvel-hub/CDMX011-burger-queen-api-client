@@ -39,10 +39,8 @@ export const Container = function () {
 	}
 
 	// Funcion NombreCliente
-	const nombreCliente = (e) => {
-		setClientName(e.target.value);
-	}
-
+	const handleBlur = (e) => setClientName(e.target.value);
+		
 	const filterProductos = () => {
 		return data.filter((p) => p.type == menu);
 	};
@@ -105,9 +103,8 @@ export const Container = function () {
 
 						<label>
 							Nombre del cliente  :
-							<input type="nombre" className="input-name-cliente" placeholder='' onChange={nombreCliente} value={clientName.value} required />
+							<input onBlur={handleBlur} required />
 						</label>
-						<button className="btn-nom-cliente"> Ingresa Nombre de Cliente a Comanda</button>
 					</div>
 					<div>
 						<span className="material-icons" onClick={handleLogout}>

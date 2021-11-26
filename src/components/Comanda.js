@@ -19,7 +19,9 @@ const Comanda = (props) => {
         decreaseProductQuantity(product)
     };
 
-
+    const precioTotal = productsToOrder.reduce((a, c) => a + c.price * c.qty, 0);
+    console.log(precioTotal);
+  
     return (
         <div className="comanda">
             <h2>Comanda</h2>
@@ -37,15 +39,37 @@ const Comanda = (props) => {
                             -
                         </button>
                     </div>
+                    <div>
+                        {op.qty} x ${op.price.toFixed(2)}
+                    </div>
                 </div>
             ))}
 
 
+            {productsToOrder.length !== 0 && (
+                <>
+                    <hr></hr>
+                    {/* <div>
+                        <div>Items Price</div>
+                        <div>${precioTotal}</div>
+                    </div> */}
+                    
+                        <div>
+                    <strong>Total Price</strong>
+                    </div>
+                    <div>
+                     {/* <strong>${precioTotal.toFixed(2)}</strong> */}
+                     <strong>${precioTotal}</strong>
+                     </div>
+                    
+                </>
+            )}
+
             <button className="btn-enviar-cocina">ENVIAR A COCINA</button>
             <p>Cliente estrella : {clientName}</p>
 
-        </div>
 
+        </div>
     )
 }
 

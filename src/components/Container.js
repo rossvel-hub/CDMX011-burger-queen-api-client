@@ -129,7 +129,7 @@ export const Container = function () {
 				</div>
 				<Comanda productsToOrder={productsToOrder} increaseProductQuantity={increaseProductQuantity} decreaseProductQuantity={decreaseProductQuantity} clientName={clientName} />
 			</div>
-
+		
 			<footer>
 				<br />
 				<br />

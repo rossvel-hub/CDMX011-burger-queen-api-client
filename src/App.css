@@ -1,38 +1,272 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fira+Sans:wght@500&family=M+PLUS+2:wght@500;600;700&family=Montserrat:ital,wght@1,100&family=Shippori+Antique+B1&display=swap');
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+}
+* {
+	text-decoration: none;
+	margin: 0px;
+	padding: 0px;
+	font-family: 'Fira Sans', sans-serif;
 }
 
-.App-link {
-  color: #61dafb;
+body {
+  background-color: black;
+  color:aliceblue;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+h1{
+font-size: 3rem;
+font-family: Bebas Neue;
+}
+
+input[type="email"],
+input[type="password"] {
+  font-size: 1em;
+  height: 33px;
+  background: white;
+  padding: 0px 15px;
+  font-weight: bold;
+  width: 70%;
+  border-radius: 15px;
+  margin-top: 26px;
+  color: black;
+
+}
+
+input[type="submit"]{
+  width: 80%;
+    color: white;
+    background: #FFD200;
+    background-color: black;
+    border-radius: 3px solid #FFD200;
+    border: 3px solid #FFD200;
+    border-radius: 15px;
+    height: 36px;
+    font-size: 1rem;
+    margin-top: 30px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.container{
+  display: flex;
+  flex-direction: row;
+}
+
+.error {
+  cursor: pointer;
+}
+
+.div-form {
+  width: 50%;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.div-form form {
+  border: 3px solid #FFD200;
+  border-radius: 15px;
+  height: 40%;
+  width: 65%;
+  margin-bottom: 50px;
+  padding: 20px;
+  text-align: center;
+}
+
+.div-hamburger {
+  width: 50%;
+  height: 100vh;
+  background-color: white;
+}
+
+
+.logo {
+  width: 50%;
+}
+
+.img-aside{
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  object-position: center center;
+}
+/*------CSS CONTAINER------*/
+
+.header-container{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+}
+
+.container-menu{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: auto;
+}
+.logo-container {
+  width: 38%;
+}
+.input-name-cliente{
+  width: 262px;
+  height: 20px;
+    color: rgb(0, 0, 0);
+    background: #ffffff;
+    border-radius: 3px solid #FFD200;
+    border: 3px solid #FFD200;
+    border-radius: 15px;
+    font-size: 1rem;
+    margin-top: 20px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.material-icons {
+width: 7%;
+height: 30%;
+cursor: pointer;
+}
+
+.btn-nombre {
+  width: 50%;
+  height: 25%;
+}
+
+.btn-nom-cliente {
+  width: 81%;
+  border-radius: 15px;
+  height: 36px;
+  background-color: #FFD200;
+  cursor: pointer;
+}
+
+.btn-nom-cliente:hover{
+  background-color: rgb(240, 151, 17);
+}
+
+.table-items {
+  display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-content: space-between;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+
+.name-products {
+margin: 10px;
+}
+
+.price {
+  margin: 10px;
+}
+.btns-menu {
+    display: flex;
+    flex-direction: row;
+    margin: 20px;
+    justify-content: space-around;
+}
+
+.btn-desayuno {
+  background-color: rgb(101, 160, 13);
+  border-radius: 15px;
+  width: 100px;
+  height: 25px;
+  margin: 10px;
+}
+
+.btn-almuerzo {
+  background-color: rgb(101, 160, 13);
+  border-radius: 15px;
+  width: 100px;
+  height: 25px;
+  margin: 10px;
+}
+
+.btn-añadir-comanda{
+  background-color: rgb(101, 160, 13);
+  border-radius: 15px;
+  width: 100px;
+  height: 25px;
+  margin: 10px;
+}
+.btn-añadir-comanda:hover {
+  background-color: rgb(236, 240, 17);
+}
+
+.btn-eliminar {
+  background-color: rgb(101, 160, 13);
+  border-radius: 15px;
+  width: 100px;
+  height: 25px;
+  margin: 10px;
+}
+.btn-eliminar:hover {
+  background-color: rgb(240, 151, 17);
+}
+
+
+.btn-añadir-comanda {
+  background-color: greenyellow;
+  border-radius: 15px;
+  width: 144px;
+  height: 25px;
+}
+
+button:hover {
+  background-color: rgb(236, 240, 17);
+}
+
+.comanda {
+  background-color: gray;
+    border-radius: 15px;
+    height: 500px;
+    width: 329px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: space-around;
+}
+
+.btn-remove{
+align-items: center;
+font-size: 2rem;
+}
+
+.btn-add{
+  font-size: 2rem;
+}
+
+.btn-enviar-cocina{
+width: 150px;
+height: 25px;
+margin-top:auto;
+border-radius: 10px;
+}
+
+.footer-table {
+ width: 100%;
+ margin-top:auto;
+}
+
+.footer h4 {
+  color: yellow;
+}
+
+/*--------------  Cocina -----------*/
+
+.cocina {
+  display: flex;
+  flex-direction: column;
 }

@@ -4,10 +4,8 @@
         "es2021": true
     },
     "extends": [
-        "plugin:react/recommended",
-        "airbnb",
-        "plugin:jsx-a11y/recommended",
-        "plugin:react-hooks/recommended"
+        "eslint:recommended",
+        "plugin:react/recommended"
     ],
     "parserOptions": {
         "ecmaFeatures": {
@@ -17,8 +15,7 @@
         "sourceType": "module"
     },
     "plugins": [
-        "react",
-        "react-hooks"
+        "react"
     ],
     "rules": {
         "react/jsx-filename-extension": [1, {"extensions": [".js", ".jsx"] }]

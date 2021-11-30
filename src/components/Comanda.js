@@ -28,10 +28,6 @@ const Comanda = (props) => {
 
     const precioTotal = productsToOrder.reduce((a, c) => a + c.price * c.qty, 0);
 
-    // const sendOrder = () => {
-    //     createData(productsToOrder.body);
-    // }
-
     const pedido = {
         cliente: clientName,
         estatus: "pediente",

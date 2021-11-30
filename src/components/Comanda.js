@@ -69,6 +69,7 @@ const Comanda = (props) => {
                   <th>Dec</th>
                 </tr>
               </thead>
+              <tbody>
               <tr>
                 <td>{op.qty}</td>
                 <td></td>
@@ -94,6 +95,7 @@ const Comanda = (props) => {
                   </button>
                 </td>
               </tr>
+              </tbody>
             </table>
           </div>
         </div>

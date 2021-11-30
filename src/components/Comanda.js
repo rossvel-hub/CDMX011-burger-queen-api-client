@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
-import React from 'react';
-
+import React, { useState } from 'react';
+import helpHttp from '../helpers/Helpers';
+// import { useAuth } from '../context/AuthContext';
 
 const Comanda = (props) => {
     let {
@@ -11,6 +12,12 @@ const Comanda = (props) => {
     } = props;
 
 
+    const [db, setDb] = useState([]);
+    const [error, setError] = useState('');
+
+    let api = helpHttp();
+	let url = 'http://localhost:5000/Orders';
+
     const increaseProduct = (product) => {
         increaseProductQuantity(product)
     }
@@ -20,27 +27,72 @@ const Comanda = (props) => {
     };
 
     const precioTotal = productsToOrder.reduce((a, c) => a + c.price * c.qty, 0);
-    console.log(precioTotal);
-  
+
+    // const sendOrder = () => {
+    //     createData(productsToOrder.body);
+    // }
+
+    const pedido = {
+        cliente: clientName,
+        estatus: "pediente",
+        productsToOrder,
+        precioTotal: precioTotal,
+        // mesero: user.email,
+    };
+
+    // crear data
+    const createData = (data) => {
+        let options = {
+            body: data,
+            headers: { "content-type": "application/json" }
+        };
+
+        api.post(url, options).then((res) => {
+            console.log(res);
+            if (!res.err) {
+                setDb([...db, res]);
+            } else {
+                setError(res);
+            }
+        });
+    };
+
+
+
     return (
         <div className="comanda">
-            <h2>Comanda</h2>
-
+            <h2 className="title-comanda">Comanda</h2>
             {productsToOrder.map((op) => (
-                <div key={op.id}>
-                    <p>{op.qty}</p>
-                    <p>{op.name}</p>
-                    <p>{op.price}</p>
-                    <div>
-                        <button onClick={() => increaseProduct(op)}>
-                            +
-                        </button>
-                        <button onClick={() => decreaseProduct(op)}>
-                            -
-                        </button>
-                    </div>
-                    <div>
-                        {op.qty} x ${op.price.toFixed(2)}
+                <div key={op.id} className="card-product">
+                    <div >
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Cantidad</th>
+                                    <th></th>
+                                    <th>Producto</th>
+                                    <th></th>
+                                    <th>Precio</th>
+                                    <th></th>
+                                    <th>In</th>
+                                    <th>Dec</th>
+                                </tr>
+                            </thead>
+                            <tr>
+                                <td>{op.qty}</td>
+                                <td></td>
+                                <td> {op.name}</td>
+                                <td></td>
+                                <td>${op.price}</td>
+                                <td></td>
+                                <td><button onClick={() => increaseProduct(op)} className="btn-increase">
+                                    +
+                                </button></td>
+                                <td> <button onClick={() => decreaseProduct(op)} className="btn-decrease">
+                                    -
+                                </button></td>
+                            </tr>
+                        </table>
                     </div>
                 </div>
             ))}
@@ -48,25 +100,16 @@ const Comanda = (props) => {
 
             {productsToOrder.length !== 0 && (
                 <>
-                    <hr></hr>
-                    {/* <div>
-                        <div>Items Price</div>
-                        <div>${precioTotal}</div>
-                    </div> */}
-                    
-                        <div>
-                    <strong>Total Price</strong>
+                    <div className="total-price">
+                        <div><strong>Total Price</strong></div>
+                        <div><strong>${precioTotal}</strong></div>
                     </div>
-                    <div>
-                     {/* <strong>${precioTotal.toFixed(2)}</strong> */}
-                     <strong>${precioTotal}</strong>
-                     </div>
-                    
                 </>
             )}
 
-            <button className="btn-enviar-cocina">ENVIAR A COCINA</button>
-            <p>Cliente estrella : {clientName}</p>
+            <button className="btn-enviar-cocina" onClick={() =>createData(pedido)} >ENVIAR A COCINA</button>
+            <p className="p-client">Cliente estrella : {clientName}</p>
+            {error && <p className="error">{error}</p>}
 
 
         </div>

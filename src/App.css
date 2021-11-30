@@ -141,12 +141,8 @@ cursor: pointer;
   height: 25%;
 }
 
-.btn-nom-cliente {
-  width: 81%;
+.name-client-imput{
   border-radius: 15px;
-  height: 36px;
-  background-color: #FFD200;
-  cursor: pointer;
 }
 
 .btn-nom-cliente:hover{
@@ -161,7 +157,6 @@ cursor: pointer;
     flex-wrap: wrap;
     align-items: flex-start;
 }
-
 
 .name-products {
 margin: 10px;
@@ -204,18 +199,6 @@ margin: 10px;
   background-color: rgb(236, 240, 17);
 }
 
-.btn-eliminar {
-  background-color: rgb(101, 160, 13);
-  border-radius: 15px;
-  width: 100px;
-  height: 25px;
-  margin: 10px;
-}
-.btn-eliminar:hover {
-  background-color: rgb(240, 151, 17);
-}
-
-
 .btn-añadir-comanda {
   background-color: greenyellow;
   border-radius: 15px;
@@ -228,24 +211,75 @@ button:hover {
 }
 
 .comanda {
-  background-color: gray;
+    background-color: gray;
     border-radius: 15px;
-    height: 500px;
-    width: 329px;
-    display: flex;
-    justify-content: space-around;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-content: space-around;
+    min-height: 500px;
+    width: 500px;
 }
 
-.btn-remove{
-align-items: center;
-font-size: 2rem;
+.title-comanda {
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
 }
 
-.btn-add{
-  font-size: 2rem;
+/*-------- css  tabla productos  -------*/
+
+table {
+  background-color: rgb(223, 223, 223);
+  text-align: left;
+  border-collapse: collapse;
+  width: 90%;
+  color: black;
+  margin: 10px;
+  border-radius: 15px;
+  font-size: 11px;
+}
+
+th, td {
+  padding: 9px;
+}
+
+thead {
+background-color: #FFD200;
+border-bottom: solid 5px orange;
+color: black;
+border-radius: 15px;
+}
+
+.btn-increase{
+  background-color:  #FFD200;
+  width: 45px;
+  height: 25px;
+  margin-top:auto;
+  border-radius: 5px;
+}
+
+.btn-increase:hover {
+  background-color: rgb(240, 32, 17);
+}
+
+.btn-decrease {
+  background-color:  #FFD200;
+  width: 45px;
+  height: 25px;
+  margin-top: auto;
+  border-radius: 5px;
+}
+
+.btn-decrease:hover {
+  background-color: rgb(240, 32, 17);
+}
+
+.total-price {
+  justify-content: center;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 20px;
+  background-color: black;
+  border-radius: 10px;
+  width: 90%;
+  height: 50px;
 }
 
 .btn-enviar-cocina{
@@ -253,6 +287,10 @@ width: 150px;
 height: 25px;
 margin-top:auto;
 border-radius: 10px;
+}
+
+.p-client {
+  margin: 15px;
 }
 
 .footer-table {

@@ -16,8 +16,9 @@ export const Container = function () {
 	const history = useHistory();
 
 	const [data, setData] = useState([]);
+	
 	let api = helpHttp();
-	let url = ' http://localhost:5000/Products';
+	let url = 'http://localhost:5000/Products';
 
 	useEffect(() => {
 		api.get(url).then((res) => {
@@ -29,6 +30,7 @@ export const Container = function () {
 		});
 	}, [])
 
+	
 	const handleLogout = async () => {
 		try {
 			await logout();
@@ -40,7 +42,7 @@ export const Container = function () {
 
 	// Funcion NombreCliente
 	const handleBlur = (e) => setClientName(e.target.value);
-		
+
 	const filterProductos = () => {
 		return data.filter((p) => p.type == menu);
 	};
@@ -103,10 +105,10 @@ export const Container = function () {
 
 						<label>
 							Nombre del cliente  :
-							<input onBlur={handleBlur} required />
+							<input onBlur={handleBlur} required className="name-client-imput" />
 						</label>
 					</div>
-					<div>
+					<div className="">
 						<span className="material-icons" onClick={handleLogout}>
 							exit_to_app
 						</span>
@@ -127,9 +129,9 @@ export const Container = function () {
 						{data && <Menu products={filterProductos()} addProductToCommand={addProductToCommand} />}
 					</div>
 				</div>
-				<Comanda productsToOrder={productsToOrder} increaseProductQuantity={increaseProductQuantity} decreaseProductQuantity={decreaseProductQuantity} clientName={clientName} />
+				<Comanda productsToOrder={productsToOrder} increaseProductQuantity={increaseProductQuantity} decreaseProductQuantity={decreaseProductQuantity} clientName={clientName}/>
 			</div>
-		
+
 			<footer>
 				<br />
 				<br />

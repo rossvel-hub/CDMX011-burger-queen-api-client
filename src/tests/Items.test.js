@@ -12,5 +12,5 @@ test('render content', () => {
 
     component.debug()
 
-    component.debug()
+    
 })

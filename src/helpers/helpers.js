@@ -20,6 +20,7 @@
             .catch((err) => err);
     };
     const get = (url, options = {}) => customFetch(url, options);
+    
     const post = (url, options = {}) => {
         options.method = "POST";
         return customFetch(url, options);

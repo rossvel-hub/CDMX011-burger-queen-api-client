@@ -131,9 +131,10 @@ input[type="submit"]{
 }
 
 .material-icons {
+margin-top: 60px;
 width: 7%;
 height: 30%;
-cursor: pointer;
+
 }
 
 .btn-nombre {
@@ -141,28 +142,33 @@ cursor: pointer;
   height: 25%;
 }
 
-.btn-nom-cliente {
-  width: 81%;
-  border-radius: 15px;
-  height: 36px;
-  background-color: #FFD200;
-  cursor: pointer;
+.name-client-imput{
+ text-align: center;
+    border-radius: 15px;
+    height: 25px;
+    margin: 4px;
 }
 
-.btn-nom-cliente:hover{
-  background-color: rgb(240, 151, 17);
-}
 
 .table-items {
-  display: flex;
+  background-color: rgb(232, 230, 226);
+    border-radius: 15px;
+    color: black;
+    display: flex;
+    font-size: 1 rem;
     flex-direction: row;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-content: space-between;
     flex-wrap: wrap;
-    align-items: flex-start;
+    align-items: center;
+    margin: 10px;
 }
 
-
+.images-assets {
+  height: 50px;
+  width: 50px;
+  border-radius: 13px
+}
 .name-products {
 margin: 10px;
 }
@@ -194,33 +200,26 @@ margin: 10px;
 }
 
 .btn-añadir-comanda{
-  background-color: rgb(101, 160, 13);
+  background-color: #FFD200;
+  /* background-image: url(shopping.png);  */
+  background-repeat: no repeat;
   border-radius: 15px;
   width: 100px;
-  height: 25px;
-  margin: 10px;
+  width: 88px;
+  height: 70px;
+
+
 }
 .btn-añadir-comanda:hover {
-  background-color: rgb(236, 240, 17);
+  background-color: rgb(216, 109, 37);
 }
-
-.btn-eliminar {
-  background-color: rgb(101, 160, 13);
-  border-radius: 15px;
-  width: 100px;
-  height: 25px;
-  margin: 10px;
-}
-.btn-eliminar:hover {
-  background-color: rgb(240, 151, 17);
-}
-
 
 .btn-añadir-comanda {
-  background-color: greenyellow;
-  border-radius: 15px;
-  width: 144px;
-  height: 25px;
+    background-color: #FFD200;
+    border-radius: 15px;
+    width: 55px;
+    height: 54px;
+    border: none;
 }
 
 button:hover {
@@ -228,31 +227,110 @@ button:hover {
 }
 
 .comanda {
-  background-color: gray;
-    border-radius: 15px;
-    height: 500px;
-    width: 329px;
-    display: flex;
-    justify-content: space-around;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-content: space-around;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(162, 162, 162);
+  border-radius: 15px;
+  min-height: 500px;
+  width: 500px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: space-around;
 }
 
-.btn-remove{
+.title-comanda {
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+}
+
+/*-------- css  tabla productos  -------*/
+
+table {
+  background-color: rgb(223, 223, 223);
+  text-align: left;
+  border-collapse: collapse;
+  width: 90%;
+  color: black;
+  margin: 10px;
+  border-radius: 15px;
+  font-size: 11px;
+}
+
+th, td {
+  padding: 9px;
+}
+
+thead {
+background-color: #FFD200;
+border-bottom: solid 5px orange;
+color: black;
+border-radius: 15px;
+}
+
+.btn-increase{
+  background-color:  #FFD200;
+  width: 45px;
+  height: 25px;
+  margin-top:auto;
+  border-radius: 5px;
+}
+
+.btn-increase:hover {
+  background-color: rgb(240, 32, 17);
+}
+
+.btn-decrease {
+  background-color:  #FFD200;
+  width: 45px;
+  height: 25px;
+  margin-top: auto;
+  border-radius: 5px;
+}
+
+.btn-decrease:hover {
+  background-color: rgb(240, 32, 17);
+}
+
+.total-price {
+  margin: 20px;
+  background-color: black;
+  border-radius: 10px;
+  width: 30%;
+  height: 60px;
+}
+
+.total-price-title{
+  padding-top: 5px;
 align-items: center;
-font-size: 2rem;
+margin: 5px;
 }
 
-.btn-add{
-  font-size: 2rem;
+.total-price-numbers{
+margin: 5px;
 }
 
 .btn-enviar-cocina{
-width: 150px;
-height: 25px;
-margin-top:auto;
-border-radius: 10px;
+  border: 2px solid #000000;
+  background: transparent;
+  color: rgb(0, 0, 0);
+  padding: 10px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 8px;
+  width: 128px;
+  text-align: center;
+}
+
+.btn-enviar-cocina:hover {
+  background-color: #FFD200;
+}
+
+
+.p-client {
+  margin: 15px;
+  color: black;
 }
 
 .footer-table {

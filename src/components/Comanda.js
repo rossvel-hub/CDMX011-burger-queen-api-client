@@ -9,6 +9,7 @@ const Comanda = (props) => {
     decreaseProductQuantity,
     clientName,
   } = props;
+
   const [db, setDb] = useState([]);
   const [error] = useState("");
 
@@ -50,6 +51,11 @@ const Comanda = (props) => {
   };
   
   console.log('Soy pedido', pedido);
+
+  // const handleCocina = ()  {
+  //   history.push('/');
+  // }
+
   return (
     <div className="comanda">
       <h2 className="title-comanda">Comanda</h2>
@@ -103,16 +109,16 @@ const Comanda = (props) => {
       {productsToOrder.length !== 0 && (
         <>
           <div className="total-price">
-            <div>
+            <div className="total-price-title">
               <strong>Total Price</strong>
             </div>
-            <div>
+            <div className="total-price-numbers">
               <strong>${precioTotal}</strong>
             </div>
           </div>
         </>
       )}
-      <p className="p-client">Cliente estrella : {clientName}</p>
+      <p className="p-client">Cliente : {clientName}</p>
       {error && <p className="error">{error}</p>}
       <button className="btn-enviar-cocina" onClick={() => createData(pedido)}>
      ENVIAR A COCINA

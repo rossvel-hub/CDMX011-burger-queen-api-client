@@ -3,6 +3,8 @@ import React, { Fragment } from 'react'
 import { Link } from 'react-router-dom';
 
 export const Cocina = () => {
+
+    
    
     return (
        <Fragment>

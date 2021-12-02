@@ -2,6 +2,8 @@
 import React, { useState } from "react";
 import { helpHttp } from "../helpers/helpers";
 // import { useAuth } from '../context/AuthContext';
+import add from "../assets/add1.png";
+import remove from "../assets/remove1.png";
 const Comanda = (props) => {
   let {
     productsToOrder,
@@ -88,7 +90,7 @@ const Comanda = (props) => {
                     onClick={() => increaseProduct(op)}
                     className="btn-increase"
                   >
-                    +
+                    <img className="img-add" src={add} alt="bag"/>
                   </button>
                 </td>
                 <td>
@@ -97,7 +99,7 @@ const Comanda = (props) => {
                     onClick={() => decreaseProduct(op)}
                     className="btn-decrease"
                   >
-                    -
+                    <img className="img-remove" src={remove} alt="bag"/>
                   </button>
                 </td>
               </tr>

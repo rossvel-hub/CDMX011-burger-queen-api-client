@@ -2,6 +2,7 @@ import React, { useState, Fragment, useEffect } from "react";
 import { useAuth } from "../context/AuthContext";
 import { useHistory } from "react-router-dom";
 import logo from "../assets/logo.png";
+import user from "../assets/User.png";
 import table from "../assets/table.png";
 import Menu from "../components/Menu";
 import { helpHttp } from "../helpers/helpers";
@@ -13,6 +14,7 @@ export const Container = function () {
   const [menu, setMenu] = useState("desayuno");
   const [productsToOrder, setProductsToOrder] = useState([]);
   const [clientName, setClientName] = useState("");
+
   const history = useHistory();
   const [data, setData] = useState([]);
   let api = helpHttp();
@@ -85,8 +87,8 @@ export const Container = function () {
           <div>
             <img src={logo} alt="logo" className="logo-container" />
           </div>
-          <div>
-            <span className="material-icons">face</span>
+          <div className="user-elements">
+          <img className="img-user" src={user} alt="user"/>
             <label>
               Nombre del cliente :
               <input

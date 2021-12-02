@@ -10,16 +10,16 @@ export const Items = (props) => {
 
 const addProduct = (item) => {
     addProductToCommand(item)
-}
+};
 
     return (
         <div className="table-items">
-            <img src={product.img} className="images-assets"/>
+            <img className="images-assets" src={product.imagen}/>
             <p className="name-products">{product.name}</p>
             <p className="price">$ {product.price}</p>
             <div>
         <button onClick={() => addProduct(product)} className="btn-añadir-comanda">
-            <img src={shopping} alt="bag"/>
+            <img className="img-bag" src={shopping} alt="bag"/>
         </button>
         <p></p>
       </div>

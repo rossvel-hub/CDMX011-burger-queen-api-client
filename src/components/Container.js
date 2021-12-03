@@ -18,7 +18,7 @@ export const Container = function () {
   const history = useHistory();
   const [data, setData] = useState([]);
   let api = helpHttp();
-  let url = "http://localhost:5000/Products";
+  let url = "https://dbfakeross.herokuapp.com/products";
   useEffect(() => {
     api.get(url).then((res) => {
       if (!res.err) {

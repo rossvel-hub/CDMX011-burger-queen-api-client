@@ -2,6 +2,7 @@
 import React, { Fragment, useState } from 'react'
 import { useAuth } from "../context/AuthContext";
 import { useHistory } from "react-router-dom";
+import logo from "../assets/logo.png";
 
 
 export const Cocina = () => {
@@ -21,22 +22,29 @@ export const Cocina = () => {
    
     return (
        <Fragment>
+           <div className="header-cocina">
            <header>
+           <div>
+           <img src={logo} alt="logo" className="logo-cocina" />
+           </div>
+            
            <div className="cocina">
-            <h1>Pedido en cocina</h1> 
-        </div>
+           <h1>Pedido en cocina</h1> 
+           </div>
 
-        <div className="btn-logout">
+            <div className="btn-logout">
             <span className="material-icons" onClick={handleLogout}>
               exit_to_app
             </span>
-          </div>
-          </header>
-
-            <div className="container-pedidos">
-
+            </div>
+            </header>
             </div>
 
+            <div className="container-pedidos">
+                <div className="pedidos"> 
+
+                </div>
+            </div>
        </Fragment>
             
     );

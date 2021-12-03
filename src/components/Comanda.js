@@ -1,9 +1,12 @@
 /* eslint-disable react/prop-types */
 import React, { useState } from "react";
 import { helpHttp } from "../helpers/helpers";
-// import { useAuth } from '../context/AuthContext';
 import add from "../assets/add1.png";
 import remove from "../assets/remove1.png";
+import { useHistory } from 'react-router-dom';
+
+//import { useAuth } from '../context/AuthContext';
+
 const Comanda = (props) => {
   let {
     productsToOrder,
@@ -14,6 +17,8 @@ const Comanda = (props) => {
 
   const [db, setDb] = useState([]);
   const [error] = useState("");
+  const history = useHistory();
+  //const { Cocina } = useAuth();
 
  
   const increaseProduct = (product) => {
@@ -35,7 +40,7 @@ const Comanda = (props) => {
   };
 
   let api = helpHttp();
-  let url = "http://localhost:5000/Orders";
+  let url = "https://dbfakeross.herokuapp.com/Orders";
   // crear data
   const createData = (data) => {
     let options = {
@@ -46,6 +51,8 @@ const Comanda = (props) => {
       console.log(res);
       if (!res.err) {
         setDb([...db, res]);
+        // mandar a ruta cocina
+        history.push('/Cocina');
       } else {
         console.log(res);
       }
@@ -122,7 +129,7 @@ const Comanda = (props) => {
       )}
       <p className="p-client">Cliente : {clientName}</p>
       {error && <p className="error">{error}</p>}
-      <button className="btn-enviar-cocina" onClick={() => createData(pedido)}>
+      <button className="btn-enviar-cocina" onClick={() => createData(pedido)} >
      ENVIAR A COCINA
    </button>
     </div>

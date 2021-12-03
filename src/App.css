@@ -364,7 +364,26 @@ margin: 5px;
 
 /*--------------  Cocina -----------*/
 
-.cocina {
+.header-cocina{
   display: flex;
   flex-direction: column;
+}
+
+.container-pedidos {
+  display: flex;
+  flex-direction: column;
+  align-content: space-around;
+  flex-wrap: wrap
+}
+
+.pedidos {
+  background-color: grey;
+  width: 500px;
+  height: 500px;
+  border-radius: 15px;
+}
+
+.logo-cocina {
+  width: 20%;
+    margin: 20px;
 }

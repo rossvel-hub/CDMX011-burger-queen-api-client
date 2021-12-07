@@ -1,7 +1,7 @@
 import React, { useState, Fragment, useEffect } from "react";
 import { useAuth } from "../context/AuthContext";
 import { useHistory } from "react-router-dom";
-import logo from "../assets/logo.png";
+import menuu from "../assets/menu.png";
 import user from "../assets/User.png";
 import table from "../assets/table.png";
 import Menu from "../components/Menu";
@@ -13,7 +13,7 @@ export const Container = function () {
   const { logout } = useAuth();
   const [menu, setMenu] = useState("desayuno");
   const [productsToOrder, setProductsToOrder] = useState([]);
-  const [clientName, setClientName] = useState("");
+  const [clientName, setClientName] = useState([]);
 
   const history = useHistory();
   const [data, setData] = useState([]);
@@ -85,7 +85,7 @@ export const Container = function () {
       <header>
         <div className="header-container">
           <div>
-            <img src={logo} alt="logo" className="logo-container" />
+            <img src={menuu} alt="logo" className="logo-container" />
           </div>
           <div className="user-elements">
           <img className="img-user" src={user} alt="user"/>
@@ -108,7 +108,7 @@ export const Container = function () {
       {error && <p className="error">{error}</p>}
       <div className="container-menu">
         <div className="opciones-menu">
-          <h2>Burger Queen Menu</h2>
+          {/* <h2>Burger Queen Menu</h2> */}
           <div className="btns-menu">
             <button
               onClick={() => {

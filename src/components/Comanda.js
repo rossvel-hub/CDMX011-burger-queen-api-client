@@ -5,8 +5,6 @@ import add from "../assets/add1.png";
 import remove from "../assets/remove1.png";
 import { useHistory } from 'react-router-dom';
 
-//import { useAuth } from '../context/AuthContext';
-
 const Comanda = (props) => {
   let {
     productsToOrder,
@@ -18,7 +16,7 @@ const Comanda = (props) => {
   const [db, setDb] = useState([]);
   const [error] = useState("");
   const history = useHistory();
-  //const { Cocina } = useAuth();
+
 
  
   const increaseProduct = (product) => {
@@ -28,9 +26,7 @@ const Comanda = (props) => {
     decreaseProductQuantity(product);
   };
   const precioTotal = productsToOrder.reduce((a, c) => a + c.price * c.qty, 0);
-  // const sendOrder = () => {
-  //     createData(productsToOrder.body);
-  // }
+ 
   const pedido = {
     cliente: clientName,
     estatus: "pediente",
@@ -52,18 +48,12 @@ const Comanda = (props) => {
       if (!res.err) {
         setDb([...db, res]);
         // mandar a ruta cocina
-        history.push('/Cocina');
+        history.push('/Cocina?cliente='+pedido.cliente);
       } else {
         console.log(res);
       }
     });
   };
-  
-  console.log('Soy pedido', pedido);
-
-  // const handleCocina = ()  {
-  //   history.push('/');
-  // }
 
   return (
     <div className="comanda">
@@ -129,7 +119,7 @@ const Comanda = (props) => {
       )}
       <p className="p-client">Cliente : {clientName}</p>
       {error && <p className="error">{error}</p>}
-      <button className="btn-enviar-cocina" onClick={() => createData(pedido)} >
+      <button className="btn-enviar-cocina" onClick={() => createData(pedido)}>
      ENVIAR A COCINA
    </button>
     </div>

@@ -20,8 +20,9 @@ body {
 }
 
 h1{
-font-size: 3rem;
+font-size: 4rem;
 font-family: Bebas Neue;
+
 }
 
 input[type="email"],
@@ -99,6 +100,7 @@ input[type="submit"]{
   object-position: center center;
 }
 /*------CSS CONTAINER------*/
+
 
 .header-container{
   display: flex;
@@ -322,8 +324,8 @@ border-radius: 15px;
 
 .total-price-title{
   padding-top: 5px;
-align-items: center;
-margin: 5px;
+  align-items: center;
+  margin: 5px;
 }
 
 .total-price-numbers{
@@ -347,43 +349,126 @@ margin: 5px;
   background-color: #FFD200;
 }
 
-
 .p-client {
   margin: 15px;
   color: black;
 }
 
 .footer-table {
- width: 100%;
- margin-top:auto;
+  width: 100%;
+  margin-top: -43px;
 }
 
 .footer h4 {
-  color: yellow;
+  color:#FFD200;
 }
 
 /*--------------  Cocina -----------*/
 
 .header-cocina{
   display: flex;
-  flex-direction: column;
-}
-
-.container-pedidos {
-  display: flex;
-  flex-direction: column;
-  align-content: space-around;
-  flex-wrap: wrap
-}
-
-.pedidos {
-  background-color: grey;
-  width: 500px;
-  height: 500px;
-  border-radius: 15px;
+  width: 100%;
+  background-color: rgb(0, 0, 0);
+  position: relative;
+  justify-content: space-between;
+  text-align: center;
+  padding: 1rem 2rem;
 }
 
 .logo-cocina {
-  width: 20%;
-    margin: 20px;
+  width: 22%;
+  margin: 33px;
 }
+
+.title-cocina{
+  width: 30%;
+  margin-top: 80px;
+  font-size: 25px;
+}
+
+.logout-cocina {
+  width: 50px;
+  height: 50px;
+  margin: 33px;
+}
+
+/*------------------- Inicio pedidos -----------------*/
+.pedidos-conteiner {
+  width: 90%;
+	height: auto;
+	margin: auto;
+	margin-top: 40px;
+	margin-bottom: 40px;
+	background: none;
+} 
+
+.pedidos-grid {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  align-content: space-around;
+  justify-content: center;
+  background-color:none;
+  width: 18%;
+  border-radius: 15px;
+  margin: auto;
+  border-style: solid;
+  border-color: #FFD200;
+}
+
+.pedido-card{
+  flex-grow: 1;
+  flex-basis: 250px;
+  margin: 10px;
+  border-top-color: #CC0000;
+  border-right-color: blue;
+  border-bottom-color: #00FF00;
+  border-left-color: rgb(240, 238, 238);
+}
+
+.nombre-client-cocina {
+  margin-top: 10px;
+  color: rgb(6, 180, 58);
+  font-size: 19px;
+}
+
+.tiempo-preparacion {
+  margin-top: 10px;
+	font-size: 19px;
+}
+
+.pedido-card-header{
+	color: #FFD200;
+	font-size: 19px;
+	font-stretch: semi-condensed;
+}
+
+.pedido-card-body {
+	color: #20c011;
+	font-size: 19px;
+}
+
+.pedido-card-footer{
+  display: flex;
+  justify-content: space-between;
+  border-top: 2px inset #dadada54;
+  align-items: center;
+}
+
+.btn-mandar-mesa {
+  margin-top: 10px;
+  height: 40px;
+  width: 150px;
+  border-radius: 20px;
+  color: #000000;
+  font-size: 19px;
+  cursor: pointer;
+}
+
+.btn-mandar-mesa:hover {
+  background-color: #FFD200;
+}
+
+
+

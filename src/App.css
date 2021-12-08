@@ -7,6 +7,7 @@
   align-items: center;
   justify-content: center;
 }
+
 * {
 	text-decoration: none;
 	margin: 0px;
@@ -36,22 +37,21 @@ input[type="password"] {
   border-radius: 15px;
   margin-top: 26px;
   color: black;
-
 }
 
 input[type="submit"]{
   width: 80%;
-    color: white;
-    background: #FFD200;
-    background-color: black;
-    border-radius: 3px solid #FFD200;
-    border: 3px solid #FFD200;
-    border-radius: 15px;
-    height: 36px;
-    font-size: 1rem;
-    margin-top: 30px;
-    padding: 10px;
-    cursor: pointer;
+  color: white;
+  background: #FFD200;
+  background-color: black;
+  border-radius: 3px solid #FFD200;
+  border: 3px solid #FFD200;
+  border-radius: 15px;
+  height: 36px;
+  font-size: 1rem;
+  margin-top: 30px;
+  padding: 10px;
+  cursor: pointer;
 }
 
 .container{
@@ -88,7 +88,6 @@ input[type="submit"]{
   background-color: white;
 }
 
-
 .logo {
   width: 50%;
 }
@@ -99,9 +98,8 @@ input[type="submit"]{
   object-fit: cover;
   object-position: center center;
 }
+
 /*------CSS CONTAINER------*/
-
-
 .header-container{
   display: flex;
   flex-direction: row;
@@ -110,42 +108,46 @@ input[type="submit"]{
 }
 
 .container-menu{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin: auto;
 }
+
 .logo-container {
   width: 38%;
 }
-.user-elements{
+
+.user-elements {
   display: flex;
   flex-direction: row;
 }
+
 .img-user{
   margin: 40px 20px;
   height: 50px;
   width: 50px;
 }
+
 .input-name-cliente{
   width: 262px;
   height: 20px;
-    color: rgb(0, 0, 0);
-    background: #ffffff;
-    border-radius: 3px solid #FFD200;
-    border: 3px solid #FFD200;
-    border-radius: 15px;
-    font-size: 1rem;
-    margin-top: 20px;
-    padding: 5px;
-    cursor: pointer;
+  color: rgb(0, 0, 0);
+  background: #ffffff;
+  border-radius: 3px solid #FFD200;
+  border: 3px solid #FFD200;
+  border-radius: 15px;
+  font-size: 1rem;
+  margin-top: 20px;
+  padding: 5px;
+  cursor: pointer;
 }
 
 .material-icons {
-margin-top: 60px;
-width: 7%;
-height: 30%;
-cursor:pointer;
+  margin-top: 60px;
+  width: 7%;
+  height: 30%;
+  cursor:pointer;
 }
 
 .btn-nombre {
@@ -160,19 +162,18 @@ cursor:pointer;
   margin: 57px 20px 46px;
 }
 
-
 .table-items {
   background-color: rgb(232, 230, 226);
-    border-radius: 15px;
-    color: black;
-    display: flex;
-    font-size: 1 rem;
-    flex-direction: row;
-    justify-content: space-between;
-    align-content: space-between;
-    flex-wrap: wrap;
-    align-items: center;
-    margin: 10px;
+  border-radius: 15px;
+  color: black;
+  display: flex;
+  font-size: 1 rem;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 10px;
 }
 
 .images-assets {
@@ -181,59 +182,59 @@ cursor:pointer;
   border-radius: 13px
 }
 .name-products {
-margin: 10px;
+  margin: 10px;
 }
 .img-bag{
   height: 30px;
-    width: 30px;
+  width: 30px;
 }
 
 .price {
   margin: 10px;
 }
 .btns-menu {
-    display: flex;
-    flex-direction: row;
-    margin: 20px;
-    justify-content: space-around;
+  display: flex;
+  flex-direction: row;
+  margin: 20px;
+  justify-content: space-around;
 }
 
 .btn-desayuno {
-  background-color: rgb(101, 160, 13);
+  background-color: rgb(6, 180, 58);
   border-radius: 15px;
   margin: 10px;
   width: 125px;
   height: 50px;
+  border: none;
 }
 .btn-almuerzo {
-  background-color: rgb(101, 160, 13);
+  background-color: rgb(6, 180, 58);
   border-radius: 15px;
   margin: 10px;
   width: 125px;
   height: 50px;
+  border: none;
 }
 
 .btn-añadir-comanda{
   background-color: #FFD200;
-  /* background-image: url(shopping.png);  */
   background-repeat: no repeat;
   border-radius: 15px;
   width: 100px;
   width: 88px;
   height: 70px;
-
-
 }
+
 .btn-añadir-comanda:hover {
   background-color: rgb(216, 109, 37);
 }
 
 .btn-añadir-comanda {
-    background-color: #FFD200;
-    border-radius: 15px;
-    width: 55px;
-    height: 54px;
-    border: none;
+  background-color: #FFD200;
+  border-radius: 15px;
+  width: 55px;
+  height: 54px;
+  border: none;
 }
 
 button:hover {
@@ -276,10 +277,10 @@ th, td {
 }
 
 thead {
-background-color: #FFD200;
-border-bottom: solid 5px orange;
-color: black;
-border-radius: 15px;
+  background-color: #FFD200;
+  border-bottom: solid 5px orange;
+  color: black;
+  border-radius: 15px;
 }
 
 .btn-increase{
@@ -305,10 +306,12 @@ border-radius: 15px;
 .btn-decrease:hover {
   background-color: rgb(240, 32, 17);
 }
-.img-add{
+
+.img-add {
   width: 20px;
   height: 20px;
 }
+
 .img-remove{
   width: 20px;
   height: 20px;
@@ -372,7 +375,6 @@ margin: 5px;
   position: relative;
   justify-content: space-between;
   text-align: center;
-  padding: 1rem 2rem;
 }
 
 .logo-cocina {
@@ -393,82 +395,97 @@ margin: 5px;
 }
 
 /*------------------- Inicio pedidos -----------------*/
-.pedidos-conteiner {
+
+.pedidos-container {
   width: 90%;
-	height: auto;
-	margin: auto;
-	margin-top: 40px;
-	margin-bottom: 40px;
-	background: none;
+	margin: 30px auto;
 } 
 
 .pedidos-grid {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   flex-wrap: wrap;
-  align-items: flex-start;
-  align-content: space-around;
-  justify-content: center;
-  background-color:none;
-  width: 18%;
-  border-radius: 15px;
-  margin: auto;
+}
+
+.pedido-card {
+  border-radius: 10px;
   border-style: solid;
   border-color: #FFD200;
-}
-
-.pedido-card{
-  flex-grow: 1;
+  align-content: center;
   flex-basis: 250px;
   margin: 10px;
-  border-top-color: #CC0000;
-  border-right-color: blue;
-  border-bottom-color: #00FF00;
-  border-left-color: rgb(240, 238, 238);
-}
-
-.nombre-client-cocina {
-  margin-top: 10px;
-  color: rgb(6, 180, 58);
-  font-size: 19px;
-}
-
-.tiempo-preparacion {
-  margin-top: 10px;
-	font-size: 19px;
 }
 
 .pedido-card-header{
-	color: #FFD200;
-	font-size: 19px;
-	font-stretch: semi-condensed;
+  margin-top: 10px;
+  color: rgb(6, 180, 58);
+  font-size: 19px;
+  text-align: center;
+  margin: 10px 10px;
 }
 
 .pedido-card-body {
-	color: #20c011;
+  border-top: 2px inset #dadada54;
+	color: #b9c3b8;
 	font-size: 19px;
+  padding: 10px;
+  text-align: center;
 }
 
 .pedido-card-footer{
+  border-top: 2px inset #dadada54;
+}
+
+.pedido-card-footer .primerDiv{
+  text-align: right;
+  margin-top: 10px;
+  padding-right: 15px;
+}
+
+.pedido-card-footer .segundoDiv{
+  width: 90%;
+  margin: 14px auto;
+}
+
+.btn-mandar-mesa {
+  height: 50px;
+  width: 100%;
+  border-radius: 10px;
+  color: #000000;
+  font-size: 19px;
+  cursor: pointer;
+  border: none;
+  font-weight: 900;
+  background-color: rgb(6, 180, 58);
+  letter-spacing: 3px;
+}
+
+.btn-mandar-mesa:hover {
+  background-color:#FFD200;
+}
+
+/*--------------- CSS MESA --------*/
+
+.header-mesa {
+  display: flex;
+  justify-content: space-around;
+}
+.pedido-mesa{
   display: flex;
   justify-content: space-between;
   border-top: 2px inset #dadada54;
   align-items: center;
+  flex-direction: column;
 }
 
-.btn-mandar-mesa {
-  margin-top: 10px;
-  height: 40px;
-  width: 150px;
-  border-radius: 20px;
-  color: #000000;
-  font-size: 19px;
+.logo-mesa {
+  width: 22%;
+  margin: 33px;
+}
+
+.logout-mesa-p {
+  width: 50px;
+  height: 50px;
+  margin: 33px;
   cursor: pointer;
 }
-
-.btn-mandar-mesa:hover {
-  background-color: #FFD200;
-}
-
-
-

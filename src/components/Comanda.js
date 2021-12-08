@@ -16,9 +16,7 @@ const Comanda = (props) => {
   const [db, setDb] = useState([]);
   const [error] = useState("");
   const history = useHistory();
-
-
- 
+  let date = new Date();
   const increaseProduct = (product) => {
     increaseProductQuantity(product);
   };
@@ -26,13 +24,13 @@ const Comanda = (props) => {
     decreaseProductQuantity(product);
   };
   const precioTotal = productsToOrder.reduce((a, c) => a + c.price * c.qty, 0);
- 
+
   const pedido = {
     cliente: clientName,
     estatus: "pediente",
     productsToOrder,
     precioTotal: precioTotal,
-    // mesero: user.email,
+    date: date
   };
 
   let api = helpHttp();
@@ -48,7 +46,7 @@ const Comanda = (props) => {
       if (!res.err) {
         setDb([...db, res]);
         // mandar a ruta cocina
-        history.push('/Cocina?cliente='+pedido.cliente);
+        history.push('/Cocina');
       } else {
         console.log(res);
       }
@@ -75,31 +73,31 @@ const Comanda = (props) => {
                 </tr>
               </thead>
               <tbody>
-              <tr>
-                <td>{op.qty}</td>
-                <td></td>
-                <td> {op.name}</td>
-                <td></td>
-                <td>${op.price}</td>
-                <td></td>
-                <td>
-                  <button
-                    onClick={() => increaseProduct(op)}
-                    className="btn-increase"
-                  >
-                    <img className="img-add" src={add} alt="bag"/>
-                  </button>
-                </td>
-                <td>
-                  {" "}
-                  <button
-                    onClick={() => decreaseProduct(op)}
-                    className="btn-decrease"
-                  >
-                    <img className="img-remove" src={remove} alt="bag"/>
-                  </button>
-                </td>
-              </tr>
+                <tr>
+                  <td>{op.qty}</td>
+                  <td></td>
+                  <td> {op.name}</td>
+                  <td></td>
+                  <td>${op.price}</td>
+                  <td></td>
+                  <td>
+                    <button
+                      onClick={() => increaseProduct(op)}
+                      className="btn-increase"
+                    >
+                      <img className="img-add" src={add} alt="bag" />
+                    </button>
+                  </td>
+                  <td>
+                    {" "}
+                    <button
+                      onClick={() => decreaseProduct(op)}
+                      className="btn-decrease"
+                    >
+                      <img className="img-remove" src={remove} alt="bag" />
+                    </button>
+                  </td>
+                </tr>
               </tbody>
             </table>
           </div>
@@ -120,10 +118,10 @@ const Comanda = (props) => {
       <p className="p-client">Cliente : {clientName}</p>
       {error && <p className="error">{error}</p>}
       <button className="btn-enviar-cocina" onClick={() => createData(pedido)}>
-     ENVIAR A COCINA
-   </button>
+        ENVIAR A COCINA
+      </button>
     </div>
-    
+
   );
 };
 export default Comanda;
